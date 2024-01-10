@@ -8,7 +8,6 @@ export default function Checkout() {
 
   return (
     <div>
-      <Navbar />
       <div>Cart</div>
       <p>Total: {total} </p>
       {products.map((item, i) => (

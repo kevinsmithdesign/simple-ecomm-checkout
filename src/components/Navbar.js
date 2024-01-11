@@ -15,13 +15,26 @@ export default function Navbar() {
     >
       <Container>
         <Box sx={{ display: "flex" }}>
+          <Box sx={{ width: 200 }}>
+            <Link to="/" sx={{ textDecoration: "none" }}>
+              <Typography
+                variant="h6"
+                sx={{ lineHeight: "60px", color: "#fff", fontWeight: "600" }}
+              >
+                LuxeBloom
+              </Typography>
+            </Link>
+          </Box>
           <Box sx={{ flex: 1 }}>
-            <Typography
-              variant="body1"
-              sx={{ lineHeight: "60px", color: "#fff" }}
-            >
-              Company Name
-            </Typography>
+            {" "}
+            <Link to="/" sx={{ textDecoration: "none" }}>
+              <Typography
+                variant="body1"
+                sx={{ lineHeight: "60px", color: "#fff" }}
+              >
+                Products
+              </Typography>
+            </Link>
           </Box>
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <Link to="/checkout">

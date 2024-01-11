@@ -17,11 +17,30 @@ export default function Product({ item }) {
 
   return (
     <Card sx={{ boxShadow: 0 }}>
-      <CardMedia sx={{ height: 140 }} image={item.image} title="" />
+      <CardMedia
+        sx={{
+          height: 180,
+          // TODO: Fix image alignment
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center center",
+        }}
+        image={item.image}
+        title=""
+      />
       <CardContent>
-        <Typography>{item.name}</Typography>
-        <Typography>{item.price}</Typography>
-        <Button variant="contained" onClick={handleAdd}>
+        <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+          {item.name}
+        </Typography>
+        <Typography variant="h6" mb={2}>
+          ${item.price}
+        </Typography>
+        <Button
+          fullWidth
+          variant="contained"
+          sx={{ boxShadow: 0 }}
+          onClick={handleAdd}
+        >
           Add to Cart
         </Button>
       </CardContent>
